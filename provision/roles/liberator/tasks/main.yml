@@ -44,12 +44,6 @@
   args:
     chdir: "{{ api_path }}"
 
-- name: load initial data
-  sudo: yes
-  command: "python3 manage.py loaddata init"
-  args:
-    chdir: "{{ api_path }}"
-
 - name: put api/bin in path
   template:
     src: profile.j2
