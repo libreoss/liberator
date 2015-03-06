@@ -1,0 +1,12 @@
+---
+- name: create projects diretory
+  file:
+    path: /vagrant/projects
+    state: directory
+
+- name: clone api repo
+  git:
+    repo: "https://github.com/libreoss/liberator-api"
+    dest: /vagrant/projects/api
+    depth: 1
+    update: no

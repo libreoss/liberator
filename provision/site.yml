@@ -1,0 +1,14 @@
+- name: Liberator vagrant
+  hosts: vagrant
+  pre_tasks:
+    - include: roles/common/pre_tasks/main.yml
+  roles:
+    - vagrant
+
+- name: Liberator
+  hosts: all
+  pre_tasks:
+    - include: roles/common/pre_tasks/main.yml
+  roles:
+    - dokuwiki
+    - liberator
