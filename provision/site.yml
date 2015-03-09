@@ -12,3 +12,8 @@
   roles:
     - dokuwiki
     - liberator
+
+- name: Liberator vagrant
+  hosts: vagrant
+  pre_tasks:
+    - include: roles/vagrant/pre_tasks/main.yml
