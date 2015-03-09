@@ -1,0 +1,7 @@
+---
+- name: install dev pip packages
+  sudo: yes
+  pip:
+    requirements: "{{ requirements_dev_path }}"
+    executable: pip-3.2
+
