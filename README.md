@@ -26,7 +26,7 @@ Requirements:
 - Django 1.7
 - Ansible 1.8
 - Vagrant 1.7
-- Sane locale settings (for example, sr_RS UTF-8 breaks `vagrant provision`)
+- Sane locale settings (for example, sr_RS UTF-8 breaks `vagrant provision`). Recommended setting: en_US.UTF-8
 
 Dev guidlines:
 -------------
