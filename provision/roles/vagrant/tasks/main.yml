@@ -4,9 +4,10 @@
     path: /vagrant/projects
     state: directory
 
-- name: clone api repo
+- name: clone repos
+  with_items: vagrant_repos
   git:
-    repo: "https://github.com/libreoss/liberator-api"
-    dest: /vagrant/projects/api
+    repo: "{{ item.url }}"
+    dest: "/vagrant/projects/{{ item.dest }}"
     depth: 1
     update: no

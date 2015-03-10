@@ -1,2 +1,6 @@
 ---
-# vars file for vagrant
+vagrant_repos:
+  - url: "https://github.com/libreoss/liberator-api"
+    dest: api
+  - url: "https://github.com/libreoss/liberator-web-frontend"
+    dest: frontend
