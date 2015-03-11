@@ -1,4 +1,9 @@
 ---
+- name: update apt
+  sudo: yes
+  apt:
+    update_cache: yes
+
 - name: install common packages
   sudo: yes
   with_items: common_packages
