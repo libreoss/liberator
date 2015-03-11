@@ -4,3 +4,12 @@
   apt:
     update_cache: yes
     cache_valid_time: 3600
+
+- name: add backports repo
+  sudo: yes
+  copy:
+    src: backports.list
+    dest: /etc/apt/sources.list.d/backports.list
+    owner: root
+    group: root
+    mode: 0644

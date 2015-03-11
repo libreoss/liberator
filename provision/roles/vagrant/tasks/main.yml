@@ -10,4 +10,29 @@
     repo: "{{ item.url }}"
     dest: "/vagrant/projects/{{ item.dest }}"
     depth: 1
-    update: no
+
+- name: install nodejs legacy (with symlink)
+  sudo: yes
+  apt:
+    pkg: nodejs-legacy
+    state: latest
+
+- name: get npm binary
+  get_url:
+    url: https://www.npmjs.org/install.sh
+    dest: /tmp/npm-install.sh
+    sha256sum: 7052324159e2e6cdc83bd8ede9874281618fa1b2094aca875bf494a91ef6e2c0
+
+- name: install npm from binary
+  sudo: yes
+  command: bash /tmp/npm-install.sh
+  args:
+    chdir:
+    creates: /usr/bin/npm
+
+- name: install gulp with npm
+  sudo: yes
+  npm:
+    global : yes
+    state  : latest
+    name   : gulp
