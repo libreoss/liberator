@@ -9,7 +9,6 @@
   git:
     repo: "{{ item.url }}"
     dest: "/vagrant/projects/{{ item.dest }}"
-    depth: 1
 
 - name: install nodejs legacy (with symlink)
   sudo: yes
