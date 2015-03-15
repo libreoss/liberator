@@ -34,11 +34,6 @@
     db: liberator
     role_attr_flags: "CREATEDB"
 
-- name: configure liberator
-  template:
-    src: init.py.j2
-    dest: "{{ api_settings_path }}"
-
 - name: migrate DB
   command: python3 manage.py migrate
   args:
