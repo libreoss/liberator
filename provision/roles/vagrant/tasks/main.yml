@@ -9,6 +9,7 @@
   git:
     repo: "{{ item.url }}"
     dest: "/vagrant/projects/{{ item.dest }}"
+    update: no
 
 - name: install nodejs legacy (with symlink)
   sudo: yes
@@ -21,6 +22,7 @@
     url: https://www.npmjs.org/install.sh
     dest: /tmp/npm-install.sh
     sha256sum: 7052324159e2e6cdc83bd8ede9874281618fa1b2094aca875bf494a91ef6e2c0
+    validate_certs: no
 
 - name: install npm from binary
   sudo: yes
