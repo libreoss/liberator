@@ -11,11 +11,11 @@ VAGRANT_ARCH = "x64" unless defined? VAGRANT_ARCH
 
 Vagrant.configure(VAGRANTFILE_API_VERSION) do |config|
     config.vm.define "liberator" do |liberator|
-        liberator.vm.box = "debian"
+        liberator.vm.box = "debian-jessie"
         if VAGRANT_ARCH == "x64"
-            liberator.vm.box_url = "https://ftp.lugons.org/vagrant/debian-7.6.0-x86_64.box"
+            liberator.vm.box_url = "https://github.com/one-love/vagrant-base-box/releases/download/v0.1-alpha/debian-8.2-x86_64.box"
         else
-            liberator.vm.box_url = "https://dl.dropboxusercontent.com/s/60pv9an852jx9y0/Debian-7.3.0-i386b.box?dl=1"
+            liberator.vm.box_url = "https://github.com/one-love/vagrant-base-box/releases/download/v0.1-alpha/debian-8.2-x86_64.box"
         end
 
         liberator.vm.network :private_network, ip: "192.168.66.6"
