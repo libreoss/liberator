@@ -1,6 +1,8 @@
 [submodule "projects/api"]
 	path = projects/api
 	url = https://github.com/libreoss/liberator-api
+	branch = dev
 [submodule "projects/frontend"]
 	path = projects/frontend
 	url = https://github.com/libreoss/liberator-web-frontend
+	branch = dev
