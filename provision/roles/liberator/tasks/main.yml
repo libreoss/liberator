@@ -10,7 +10,7 @@
   sudo: yes
   pip:
     requirements: "{{ requirements_path }}"
-    executable: pip-3.2
+    executable: pip3
 
 - name: install python2 psycopg
   sudo: yes
